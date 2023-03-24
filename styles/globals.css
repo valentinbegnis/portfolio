@@ -4,21 +4,22 @@
 
 @layer base {
   body {
-    @apply overflow-hidden bg-void
+    font-family: var(--font-grotesk);
+    @apply bg-void;
   }
 }
 
 @layer components {
   .glass {
-    background: rgba(255, 255, 255, 0.01);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0));
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
 
   .bg-animation {
-    position: fixed;
+    position: absolute;
+    z-index: -50;
     top: 0;
     left: 0;
     width: 100%;
@@ -111,41 +112,41 @@
 
   @-webkit-keyframes animStar {
     from {
-      -webkit-transform: translateY(-1000px);
-    }
-
-    to {
       -webkit-transform: translateY(-2000px);
     }
+  
+    to {
+      -webkit-transform: translateY(-3000px);
+    }
   }
-
+  
   @-moz-keyframes animStar {
     from {
-      -moz-transform: translateY(-1000px);
-    }
-
-    to {
       -moz-transform: translateY(-2000px);
     }
+  
+    to {
+      -moz-transform: translateY(-3000px);
+    }
   }
-
+  
   @-ms-keyframes animStar {
     from {
-      -ms-transform: translateY(-1000px);
-    }
-
-    to {
       -ms-transform: translateY(-2000px);
+    }
+  
+    to {
+      -ms-transform: translateY(-3000px);
     }
   }
 
   @keyframes animStar {
     from {
-      transform: translateY(-1000px);
+      transform: translateY(-2000px);
     }
 
     to {
-      transform: translateY(-2000px);
+      transform: translateY(-3000px);
     }
   }
 
