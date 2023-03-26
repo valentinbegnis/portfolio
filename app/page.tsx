@@ -5,15 +5,15 @@ import GmailIcon from '@/components/icons/Gmail';
 const links = [
   {
     route: 'https://github.com/valentinbegnis',
-    icon: <GitHubIcon width={42} height={42} className="text-star" />,
+    icon: <GitHubIcon width={42} height={42} className="text-stardust" />,
   },
   {
     route: 'https://www.linkedin.com/in/valentinbegnis',
-    icon: <LinkedInIcon width={42} height={42} className="text-star" />,
+    icon: <LinkedInIcon width={42} height={42} className="text-stardust" />,
   },
   {
     route: 'mailto:begnisvalentin@gmail.com',
-    icon: <GmailIcon width={42} height={42} className="text-star" />,
+    icon: <GmailIcon width={42} height={42} className="text-stardust" />,
   },
 ];
 

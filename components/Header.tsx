@@ -22,7 +22,7 @@ const links = [
 
 export default function Header() {
   return (
-    <header className="glass w-full p-4 flex justify-around items-center fixed z-20 top-0 border-b border-star/20 left-0 text-star">
+    <header className="glass header-blur w-full p-4 flex justify-around items-center fixed z-20 top-0 border-b border-star/20 left-0 text-star">
       <h1 className="text-2xl font-bold tracking-widest italic">VJB</h1>
       <nav>
         <ul className="flex gap-8 text-lg">

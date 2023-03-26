@@ -47,6 +47,7 @@ export default function ProjectsPage() {
           <Project key={project.name} project={project} />
         ))}
       </div>
+      <h3 className="text-3xl">En proceso 🛠</h3>
     </div>
   );
 }

@@ -33,10 +33,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <span />
           <span />
           <span />
-          <span />
         </div>
 
-        <div className="bg-animation bg-void">
+        <div className="bg-animation">
           <div className="stars" />
           <div className="stars2" />
           <div className="stars3" />
