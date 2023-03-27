@@ -90,7 +90,7 @@ const workExperience = [
 
 export default function AboutPage() {
   return (
-    <div className="pt-24 flex flex-col justify-center items-center gap-12 text-star">
+    <div className="pt-32 pb-16 flex flex-col justify-center items-center gap-12 text-star">
       <section className="flex flex-col items-center gap-8">
         <h1 className="text-4xl text-center font-bold text-nebula">About me</h1>
         <p className="w-4/5 text-lg text-center">

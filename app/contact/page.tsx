@@ -52,7 +52,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="pt-24 flex flex-col items-center gap-24 text-star">
+    <div className="pt-32 flex flex-col items-center gap-24 text-star">
       <h1 className="text-4xl text-center font-bold text-nebula">Contact me</h1>
       <div className="flex flex-col gap-4">
         <Transition

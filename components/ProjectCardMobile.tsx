@@ -22,15 +22,17 @@ export default function ProjectCardMobile({ project, technologies }: Props) {
         className="w-[320px]"
       >
         {project.images.map((url) => (
-          <SwiperSlide key={url} className="relative h-[250px]">
-            <Image
-              src={url}
-              alt={`${project.name} illustrative image`}
-              priority
-              fill
-              sizes="320px"
-              className="object-cover rounded-t-md"
-            />
+          <SwiperSlide key={url}>
+            <div className="relative h-[250px] overflow-hidden">
+              <Image
+                src={url}
+                alt={`${project.name} illustrative image`}
+                priority
+                fill
+                sizes="320px"
+                className="object-cover rounded-t-md"
+              />
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>

@@ -23,7 +23,7 @@ export default function ProjectCardTablet({ project, technologies, isLast }: Pro
         >
           {project.images.map((url) => (
             <SwiperSlide key={url}>
-              <div className="relative h-[270px]">
+              <div className="relative h-[270px] overflow-hidden">
                 <Image
                   src={url}
                   alt={`${project.name} illustrative image`}

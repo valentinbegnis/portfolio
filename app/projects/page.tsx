@@ -1,8 +1,8 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import ProjectCardMobile from '@/components/ProjectCardMobile';
 import ProjectCardTablet from '@/components/ProjectCardTablet';
+import useResize from '@/hooks/useResize';
 
 const projects = [
   {
@@ -48,18 +48,11 @@ const technologies: TechnologiesOptions = {
 };
 
 export default function ProjectsPage() {
-  const [width, setWidth] = useState(0);
+  const { width } = useResize();
   const breakpoint = 768;
 
-  useEffect(() => {
-    const handleResizeWindow = () => setWidth(window.innerWidth);
-
-    window.addEventListener('resize', handleResizeWindow);
-    return () => window.removeEventListener('resize', handleResizeWindow);
-  }, []);
-
   return (
-    <div className="pt-24 pb-12 flex flex-col items-center gap-8 text-star">
+    <div className="pt-32 pb-16 flex flex-col items-center gap-8 text-star">
       <div className="flex flex-col gap-2">
         <h1 className="text-center text-4xl font-bold text-nebula">Projects</h1>
         <h2 className="text-center font-medium text-xl text-stardust">Latest projects</h2>
