@@ -1,3 +1,3 @@
 # Portfolio
 
-Personal portfolio created with Next.js 13
+Personal portfolio developed with Next.js 13 and TypeScript
