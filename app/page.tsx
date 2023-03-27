@@ -5,15 +5,15 @@ import GmailIcon from '@/components/icons/Gmail';
 const links = [
   {
     route: 'https://github.com/valentinbegnis',
-    icon: <GitHubIcon width={42} height={42} className="text-stardust" />,
+    icon: <GitHubIcon width={42} height={42} />,
   },
   {
     route: 'https://www.linkedin.com/in/valentinbegnis',
-    icon: <LinkedInIcon width={42} height={42} className="text-stardust" />,
+    icon: <LinkedInIcon width={42} height={42} />,
   },
   {
     route: 'mailto:begnisvalentin@gmail.com',
-    icon: <GmailIcon width={42} height={42} className="text-stardust" />,
+    icon: <GmailIcon width={42} height={42} />,
   },
 ];
 
@@ -33,7 +33,12 @@ export default function HomePage() {
       <ul className="w-full flex justify-center gap-4 absolute z-10 bottom-20">
         {links.map(({ route, icon }) => (
           <li key={route}>
-            <a href={route} target="_blank" rel="noreferrer">
+            <a
+              href={route}
+              target="_blank"
+              rel="noreferrer"
+              className="text-stardust/80 hover:text-star/90 transition-colors"
+            >
               {icon}
             </a>
           </li>

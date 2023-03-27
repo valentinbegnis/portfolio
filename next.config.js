@@ -7,7 +7,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'imgs.search.brave.com',
+        hostname: 'picsum.photos',
       },
     ],
   },

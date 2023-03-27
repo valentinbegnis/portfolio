@@ -64,7 +64,7 @@ export default function AboutPage() {
                     rel="noreferrer"
                     className="hover:underline"
                   >
-                    <h3 className="font-bold text-lg">{education.institution}</h3>
+                    <span className="font-bold text-lg">{education.institution}</span>
                   </a>
                   <p>{education.title}</p>
                   <span className="text-stardust">
