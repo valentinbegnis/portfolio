@@ -1,4 +1,8 @@
 import Image from 'next/image';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Autoplay, Pagination } from 'swiper';
+import 'swiper/swiper.min.css';
+import 'swiper/swiper-bundle.min.css';
 
 interface Props {
   project: ProjectType
@@ -6,17 +10,31 @@ interface Props {
 }
 
 export default function ProjectCardMobile({ project, technologies }: Props) {
+  SwiperCore.use([Autoplay, Pagination]);
+
   return (
     <article className="w-[320px] relative flex flex-col gap-3">
-      <div className="relative h-[250px]">
-        <Image
-          src={project.imagesUrl[0]}
-          alt={`${project.name} illustrative image`}
-          priority
-          fill
-          className="object-cover rounded-t-md border-x border-t border-star/20"
-        />
-      </div>
+      <Swiper
+        slidesPerView={1}
+        loop
+        pagination={{ clickable: true }}
+        autoplay={{ delay: 3000 }}
+        className="w-[320px]"
+      >
+        {project.images.map((url) => (
+          <SwiperSlide key={url} className="relative h-[250px]">
+            <Image
+              src={url}
+              alt={`${project.name} illustrative image`}
+              priority
+              fill
+              sizes="320px"
+              className="object-cover rounded-t-md"
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
       <div className="flex flex-col items-center gap-3 px-3 pb-3">
         <h3 className="font-bold text-2xl">{project.name}</h3>
         <p className="text-center">{project.description}</p>

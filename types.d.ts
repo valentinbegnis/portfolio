@@ -1,7 +1,7 @@
 type ProjectType = {
   name: string
   description: string
-  imagesUrl: Array<string>
+  images: Array<string>
   githubUrl: string
   deployUrl: string
   stackUsed: Array<string>

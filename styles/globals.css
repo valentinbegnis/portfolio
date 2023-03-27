@@ -23,6 +23,8 @@
 
   .colored-blur {
     background: linear-gradient(135deg, rgba(225, 110, 45, 0.4), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
   }
 
   .bg-animation {
@@ -32,6 +34,33 @@
     left: 0;
     width: 100%;
     height: 100%;
+  }
+
+  .bg-animation2 {
+    position: absolute;
+    z-index: -20;
+    top: 800px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .bg-animation3 {
+    position: absolute;
+    z-index: -20;
+    top: 950px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (min-width: 753px) {
+    .bg-animation2 {
+      top: 200px;
+    }
+    .bg-animation3 {
+      top: 400px;
+    }
   }
 
   .stars {
@@ -120,41 +149,41 @@
 
   @-webkit-keyframes animStar {
     from {
-      -webkit-transform: translateY(-2000px);
+      -webkit-transform: translateY(0);
     }
   
     to {
-      -webkit-transform: translateY(-3000px);
+      -webkit-transform: translateY(-2000px);
     }
   }
   
   @-moz-keyframes animStar {
     from {
-      -moz-transform: translateY(-2000px);
+      -moz-transform: translateY(0);
     }
   
     to {
-      -moz-transform: translateY(-3000px);
+      -moz-transform: translateY(-2000px);
     }
   }
   
   @-ms-keyframes animStar {
     from {
-      -ms-transform: translateY(-2000px);
+      -ms-transform: translateY(0);
     }
   
     to {
-      -ms-transform: translateY(-3000px);
+      -ms-transform: translateY(-2000px);
     }
   }
 
   @keyframes animStar {
     from {
-      transform: translateY(-2000px);
+      transform: translateY(0);
     }
 
     to {
-      transform: translateY(-3000px);
+      transform: translateY(-2000px);
     }
   }
 

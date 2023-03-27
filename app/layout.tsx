@@ -1,6 +1,7 @@
 import '@/styles/globals.css';
 import { Space_Grotesk as spaceGrotesk } from 'next/font/google';
 import Header from '@/components/Header';
+import BackgroundAnimation from '@/components/BackgroundAnimation';
 
 export const metadata = {
   title: 'Valentín Begnis | Software Developer',
@@ -18,29 +19,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={font.variable}>
         <Header />
-        <main className="flex justify-center items-center">
+        <main className="relative flex justify-center items-center">
           {children}
         </main>
-        <div className="shooting-stars-animation">
-          <span />
-          <span />
-          <span />
-          <span />
-          <span />
-          <span />
-          <span />
-          <span />
-          <span />
-          <span />
-          <span />
-        </div>
-
-        <div className="bg-animation">
-          <div className="stars" />
-          <div className="stars2" />
-          <div className="stars3" />
-          <div className="stars4" />
-        </div>
+        <BackgroundAnimation />
       </body>
     </html>
   );
