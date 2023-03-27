@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+  html, body {
+    width: 100%;
+    height: 100%;
+  }
+
   body {
     font-family: var(--font-grotesk);
     @apply bg-void;
@@ -29,33 +34,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-  }
-
-  .bg-animation2 {
-    position: absolute;
-    z-index: -20;
-    top: 800px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  .bg-animation3 {
-    position: absolute;
-    z-index: -20;
-    top: 950px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  @media (min-width: 753px) {
-    .bg-animation2 {
-      top: 200px;
-    }
-    .bg-animation3 {
-      top: 400px;
-    }
   }
 
   .stars {

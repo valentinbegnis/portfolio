@@ -25,21 +25,13 @@ export default function BackgroundAnimation() {
           </div>
         )
       }
-      <div className="bg-animation overflow-hidden">
+
+      <div className={`bg-animation overflow-hidden ${pathname === '/about' && 'h-[200%]'} ${pathname === '/projects' && 'h-[230%]'}`}>
         <div className="stars" />
         <div className="stars2" />
         <div className="stars3" />
         <div className="stars4" />
       </div>
-      {(pathname === '/about' || pathname === '/projects')
-        && (
-          <div className={`bg-animation ${pathname === '/about' ? 'bg-animation2' : 'bg-animation3'} overflow-hidden`}>
-            <div className="stars" />
-            <div className="stars2" />
-            <div className="stars3" />
-            <div className="stars4" />
-          </div>
-        )}
     </>
   );
 }
