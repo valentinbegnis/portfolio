@@ -56,7 +56,7 @@ const educationHistory = [
     institution: 'Universidad de Buenos Aires',
     title: 'Bachelor of Computer Science',
     startDate: '2022',
-    endDate: '2026',
+    endDate: '2027',
     route: 'https://exactas.uba.ar/ensenanza/carreras-de-grado/ciencias-de-la-computacion',
   },
   {
@@ -81,7 +81,7 @@ const workExperience = [
     startDate: 'December 2022',
     endDate: 'Present',
     tasks: [
-      'Developed and implemented React components for web applications',
+      'Develop and fix React components for web applications',
       'Refactored an existing codebase to improve performance and maintainability',
       'Collaborated with cross-functional teams to identify and prioritize features and requirements',
     ],

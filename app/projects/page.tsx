@@ -9,11 +9,11 @@ import 'swiper/swiper-bundle.min.css';
 const projects = [
   {
     name: 'Fashion Ecommerce',
-    description: 'Get everything in the crypto space: price, volumes, market caps, 24-hour price charts, and breaking news.',
+    description: 'Real Ecommerce for a local brand with existing clients. Easy CRUD operations via Google Spreadsheets.',
     images: ['/images/Fashion-Ecommerce-1.png', '/images/Fashion-Ecommerce-2.png', '/images/Fashion-Ecommerce-3.png'],
     githubUrl: 'https://github.com/valentinbegnis/ecommerce-calzados-nextjs',
     deployUrl: 'https://picotacalzados.vercel.app',
-    stackUsed: ['Next.js', 'ChakraUI', 'LocalStorage', 'Spreadsheets'],
+    stackUsed: ['Next.js', 'ChakraUI', 'LocalStorage', 'Google Spreadsheets'],
   },
   {
     name: 'Crypto Space',
@@ -25,7 +25,7 @@ const projects = [
   },
   {
     name: 'IP Address Tracker',
-    description: 'Get everything in the crypto space: price, volumes, market caps, 24-hour price charts, and breaking news.',
+    description: 'Find any IP address location, latitude, and longitude. Map view included. Track and discover with this IP Address app.',
     images: ['/images/Ip-Address-Tracker-1.png'],
     githubUrl: 'https://github.com/valentinbegnis/ip_address_tracker',
     deployUrl: 'https://valentinbegnis.github.io/ip_address_tracker',
@@ -45,7 +45,7 @@ const technologies: TechnologiesOptions = {
   'Leaflet.js': 'bg-clip-text text-transparent bg-gradient-to-r from-sky to-sun',
   'API': 'text-stardust',
   'API\'s': 'text-stardust',
-  'Spreadsheets': 'text-[#41cb83]',
+  'Google Spreadsheets': 'text-[#41cb83]',
   'LocalStorage': 'text-stardust',
 };
 
@@ -66,7 +66,7 @@ export default function ProjectsPage() {
                 slidesPerView={1}
                 loop
                 pagination={{ clickable: true }}
-                autoplay={{ delay: 3000 }}
+                autoplay={{ delay: 4000 }}
                 className="w-[320px] md:w-[340px] md:rounded-md"
               >
                 {project.images.map((url) => (
@@ -94,7 +94,7 @@ export default function ProjectsPage() {
                   </div>
                   <div className="w-[45%] border-t border-star/20" />
                 </div>
-                <div className="flex flex-col gap-3">
+                <div className="w-full flex flex-col gap-3">
                   <ul className={`flex flex-wrap justify-center gap-3 md:gap-2 ${project.stackUsed.length > 3 ? 'md:h-15' : 'md:h-11'}`}>
                     {project.stackUsed.map((technology) => (
                       <li key={technology} className={`w-max font-medium ${technologies[technology]}`}>
