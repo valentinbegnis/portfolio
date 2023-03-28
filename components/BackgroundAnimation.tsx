@@ -26,7 +26,7 @@ export default function BackgroundAnimation() {
         )
       }
 
-      <div className={`bg-animation overflow-hidden ${pathname === '/about' && 'h-[200%]'} ${pathname === '/projects' && 'h-[230%]'}`}>
+      <div className="bg-animation">
         <div className="stars" />
         <div className="stars2" />
         <div className="stars3" />

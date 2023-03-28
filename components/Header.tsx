@@ -36,7 +36,7 @@ export default function Header() {
   };
 
   return (
-    <header className={`${show ? 'h-[280px] backdrop-blur-[16px] items-start' : 'h-[75px] backdrop-blur-[8px] items-center'} md:h-[75px] transition transition-all glass w-full p-4 md:px-8 flex justify-between md:items-center fixed z-20 top-0 border-b border-star/20 left-0 text-star`}>
+    <header className={`${show ? 'h-[280px] backdrop-blur-[16px] items-start' : 'h-[75px] backdrop-blur-[8px] items-center'} md:h-[75px] transition transition-all glass w-full p-4 md:px-8 flex justify-between md:items-center items-start fixed z-20 top-0 border-b border-star/20 left-0 text-star`}>
       <Link href="/" className="flex items-center gap-2">
         <PlanetIcon width={32} height={32} className="text-star/70" />
         <h1 className="text-xl font-bold tracking-widest italic text-star/70">VJB</h1>
