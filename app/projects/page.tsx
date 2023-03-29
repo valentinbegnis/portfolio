@@ -28,7 +28,7 @@ const projects = [
     description: 'Find any IP address location, latitude, and longitude. Map view included. Track and discover with this IP Address app.',
     images: ['/images/Ip-Address-Tracker-1.png'],
     githubUrl: 'https://github.com/valentinbegnis/ip_address_tracker',
-    deployUrl: 'https://valentinbegnis.github.io/ip_address_tracker',
+    deployUrl: 'https://valentinbegnis.github.io/ip_address_tracker/src',
     stackUsed: ['JavaScript', 'Leaflet.js', 'API'],
   },
 ];
