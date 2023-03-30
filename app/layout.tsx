@@ -4,8 +4,11 @@ import Header from '@/components/Header';
 import BackgroundAnimation from '@/components/BackgroundAnimation';
 
 export const metadata = {
-  title: 'Valentín Begnis | Software Developer',
-  description: 'Portfolio',
+  title: 'Valentín Begnis | Full Stack Developer',
+  description: 'Welcome to my portfolio!',
+  icons: {
+    icon: '/planet.svg',
+  },
 };
 
 const font = spaceGrotesk({

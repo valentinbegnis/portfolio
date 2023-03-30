@@ -94,31 +94,43 @@ export default function ContactPage() {
           className="w-80 p-4 relative flex flex-col gap-4"
         >
           <label htmlFor="name" className="flex flex-col gap-2">
-            Name
+            <p>
+              Name
+              <span className="text-bigbang">*</span>
+            </p>
             <input
               ref={username}
               type="text"
               name="user_name"
               id="name"
+              required
               className="px-2 py-1 rounded-md border border-star/20 bg-transparent"
             />
           </label>
           <label htmlFor="email" className="flex flex-col gap-2">
-            Email
+            <p>
+              Email
+              <span className="text-bigbang">*</span>
+            </p>
             <input
               ref={email}
               type="email"
               name="user_email"
               id="email"
+              required
               className="px-2 py-1 rounded-md border border-star/20 bg-transparent"
             />
           </label>
           <label htmlFor="message" className="flex flex-col gap-2">
-            Message
+            <p>
+              Message
+              <span className="text-bigbang">*</span>
+            </p>
             <textarea
               ref={message}
               name="message"
               id="message"
+              required
               className="px-2 py-1 rounded-md border border-star/20 bg-transparent min-h-[60px] max-h-[200px]"
             />
           </label>

@@ -36,12 +36,12 @@ export default function Header() {
   };
 
   return (
-    <header className={`${show ? 'h-[280px] backdrop-blur-[16px] items-start' : 'h-[75px] backdrop-blur-[8px] items-center'} md:h-[75px] transition transition-all glass w-full p-4 md:px-8 flex justify-between md:items-center items-start fixed z-20 top-0 border-b border-star/20 left-0 text-star`}>
+    <header className={`${show ? 'h-[280px] backdrop-blur-[16px] items-start' : 'h-[75px] backdrop-blur-[8px] items-center'} md:h-[75px] transition-all md:transition-none glass w-full p-4 md:px-8 flex justify-between md:items-center items-start fixed z-20 top-0 border-b border-star/20 left-0 text-star`}>
       <Link href="/" className="flex items-center gap-2">
         <PlanetIcon width={32} height={32} className="text-star/70" />
-        <h1 className="text-xl font-bold tracking-widest italic text-star/70">VJB</h1>
+        <h1 className="text-2xl font-bold tracking-widest italic text-star/70">VJB</h1>
       </Link>
-      <nav className={`${show ? 'top-10 left-0' : '-top-56 left-[160px]'} transition transition-all duration-100 md:static absolute md:min-h-fit min-h-[60px] left-0 md:w-auto w-full flex md:items-center justify-center px-5 pt-8 md:pt-0`}>
+      <nav className={`${show ? 'top-10 left-0' : '-top-56 left-[160px]'} transition-all duration-100 md:static absolute md:min-h-fit min-h-[60px] left-0 md:w-auto w-full flex md:items-center justify-center px-5 pt-8 md:pt-0`}>
         <ul className="flex flex-col items-center md:flex-row md:gap-8 gap-6 text-lg">
           {links.map(({ label, route }) => (
             <li key={route}>

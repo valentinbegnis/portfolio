@@ -23,14 +23,6 @@ const projects = [
     deployUrl: 'https://cryptocurrencyspace.netlify.app',
     stackUsed: ['React.js', 'Chart.js', 'API\'s', 'Redux-toolkit', 'Ant Design'],
   },
-  {
-    name: 'IP Address Tracker',
-    description: 'Find any IP address location, latitude, and longitude. Map view included. Track and discover with this IP Address app.',
-    images: ['/images/Ip-Address-Tracker-1.png'],
-    githubUrl: 'https://github.com/valentinbegnis/ip_address_tracker',
-    deployUrl: 'https://valentinbegnis.github.io/ip_address_tracker/src',
-    stackUsed: ['JavaScript', 'Leaflet.js', 'API'],
-  },
 ];
 
 const technologies: TechnologiesOptions = {
@@ -75,8 +67,8 @@ export default function ProjectsPage() {
                       <Image
                         src={url}
                         alt={`${project.name} illustrative image`}
-                        priority
                         fill
+                        priority={url.includes('Fashion-Ecommerce-1')}
                         sizes="320px, (min-width: 768px) 340px"
                         className="object-cover rounded-t-md md:rounded-md"
                       />
