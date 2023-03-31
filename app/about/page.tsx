@@ -41,10 +41,6 @@ const stack = [
     label: 'Docker',
     icon: <DockerIcon width={42} height={42} className="text-[#24b8eb]" />,
   },
-  // {
-  //   label: 'C#',
-  //   icon: <HTMLIcon width={42} height={42} className="text-nebula" />,
-  // },
   {
     label: 'Python',
     icon: <PythonIcon width={42} height={42} />,
@@ -56,7 +52,7 @@ const educationHistory = [
     institution: 'Universidad de Buenos Aires',
     title: 'Bachelor of Computer Science',
     startDate: '2022',
-    endDate: '2027',
+    endDate: 'Present',
     route: 'https://exactas.uba.ar/ensenanza/carreras-de-grado/ciencias-de-la-computacion',
   },
   {
@@ -78,7 +74,7 @@ const educationHistory = [
 const workExperience = [
   {
     role: 'Freelance Full Stack Developer',
-    startDate: 'December 2022',
+    startDate: 'September 2022',
     endDate: 'Present',
     tasks: [
       'Develop and fix React components for web applications',
