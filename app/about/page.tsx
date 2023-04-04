@@ -74,8 +74,8 @@ const educationHistory = [
 const workExperience = [
   {
     role: 'Freelance Full Stack Developer',
-    startDate: 'September 2022',
-    endDate: 'Present',
+    startDate: 'Feb 2022',
+    endDate: 'Apr 2023',
     tasks: [
       'Develop and fix React components for web applications',
       'Refactored an existing codebase to improve performance and maintainability',
@@ -100,7 +100,6 @@ export default function AboutPage() {
           Keep scrolling to learn more about my stack, education history, and work experience!
         </p>
       </section>
-
       <section className="flex flex-col justify-center gap-12">
         <section className="flex flex-col gap-6">
           <h2 className="font-bold text-2xl text-center text-sky">Stack</h2>
