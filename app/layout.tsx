@@ -2,6 +2,7 @@ import '@/styles/globals.css';
 import { Space_Grotesk as spaceGrotesk } from 'next/font/google';
 import Header from '@/components/Header';
 import BackgroundAnimation from '@/components/BackgroundAnimation';
+import Toaster from '@/components/Toaster';
 
 export const metadata = {
   title: 'Valentín Begnis | Full Stack Developer',
@@ -17,12 +18,17 @@ const font = spaceGrotesk({
   variable: '--font-grotesk',
 });
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en">
       <body className={font.variable}>
         <Header />
-        <main className="relative flex justify-center items-center">
+        <Toaster />
+        <main className="relative flex items-center justify-center">
           {children}
         </main>
         <BackgroundAnimation />

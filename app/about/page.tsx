@@ -86,9 +86,9 @@ const workExperience = [
 
 export default function AboutPage() {
   return (
-    <div className="pt-32 pb-16 flex flex-col justify-center items-center gap-12 text-star">
+    <div className="flex flex-col items-center justify-center gap-12 pt-32 pb-16 text-star">
       <section className="flex flex-col items-center gap-8">
-        <h1 className="text-4xl text-center font-bold text-nebula">About me</h1>
+        <h1 className="text-4xl font-bold text-center text-nebula">About me</h1>
         <p className="w-4/5 text-lg text-center">
           I&apos;m a Full Stack Developer and a first-year
           Computer Science student with a passion for science,
@@ -102,72 +102,76 @@ export default function AboutPage() {
       </section>
       <section className="flex flex-col justify-center gap-12">
         <section className="flex flex-col gap-6">
-          <h2 className="font-bold text-2xl text-center text-sky">Stack</h2>
-          <ul className="w-4/5 md:w-full m-auto flex flex-wrap justify-center items-center gap-4">
-            {stack.map(({ label, icon }) => (
-              <li key={label} className="w-max flex flex-col items-center">
-                {icon}
-                <span className="text-star/60">{label}</span>
-              </li>
-            ))}
+          <h2 className="text-2xl font-bold text-center text-sky">Stack</h2>
+          <ul className="flex flex-wrap items-center justify-center w-4/5 gap-4 m-auto md:w-full">
+            {
+              stack.map(({ label, icon }) => (
+                <li key={label} className="flex flex-col items-center w-max">
+                  {icon}
+                  <span className="text-star/60">{label}</span>
+                </li>
+              ))
+            }
           </ul>
         </section>
         <div className="flex flex-wrap justify-center gap-12 md:gap-8">
           <section className="flex flex-col gap-6">
-            <h2 className="font-bold text-2xl text-center text-sky">Education History</h2>
+            <h2 className="text-2xl font-bold text-center text-sky">Education History</h2>
             <div className="flex flex-col gap-4">
-              {educationHistory.map((education) => (
-                <article key={education.title} className="relative z-10">
-                  <div className="p-3 w-[340px] md:w-[375px]">
-                    <a
-                      href={education.route}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="hover:underline"
-                    >
-                      <span className="font-bold text-lg">{education.institution}</span>
-                    </a>
-                    <p>{education.title}</p>
-                    <span className="text-stardust">
-                      {education.startDate}
-                      {' '}
-                      &bull;
-                      {' '}
-                      {education.endDate}
-                    </span>
-                  </div>
-                  <div className="glass absolute top-0 left-0 h-full w-full -z-10 border border-star/20 rounded-md shadow-md shadow-stardust/10" />
-                </article>
-              ))}
+              {
+                educationHistory.map((education) => (
+                  <article key={education.title} className="relative z-10">
+                    <div className="p-3 w-[340px] md:w-[375px]">
+                      <a
+                        href={education.route}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="hover:underline"
+                      >
+                        <span className="text-lg font-bold">{education.institution}</span>
+                      </a>
+                      <p>{education.title}</p>
+                      <span className="text-stardust">
+                        {education.startDate}
+                        {' '}
+                        &bull;
+                        {' '}
+                        {education.endDate}
+                      </span>
+                    </div>
+                    <div className="absolute top-0 left-0 w-full h-full border rounded-md shadow-md glass -z-10 border-star/20 shadow-stardust/10" />
+                  </article>
+                ))
+              }
             </div>
           </section>
           <section className="flex flex-col gap-6">
-            <h2 className="font-bold text-2xl text-center text-sky">Work Experience</h2>
+            <h2 className="text-2xl font-bold text-center text-sky">Work Experience</h2>
             <div className="flex flex-col gap-4">
               {
-              workExperience.map((work) => (
-                <article key={work.role} className="relative z-10">
-                  <div className="p-3 w-[340px] md:w-[375px]">
-                    <h3 className="font-bold text-lg">{work.role}</h3>
-                    <span className="text-stardust">
-                      {work.startDate}
-                      {' '}
-                      &bull;
-                      {' '}
-                      {work.endDate}
-                    </span>
-                    <ul className="px-4 pt-2 flex flex-col gap-4">
-                      {work.tasks.map((task) => (
-                        <li key={task} className="list-disc">
-                          {task}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className="glass absolute top-0 left-0 h-full w-full -z-10 border border-star/20 rounded-md shadow-md shadow-stardust/10" />
-                </article>
-              ))
-            }
+                workExperience.map((work) => (
+                  <article key={work.role} className="relative z-10">
+                    <div className="p-3 w-[340px] md:w-[375px]">
+                      <h3 className="text-lg font-bold">{work.role}</h3>
+                      <span className="text-stardust">
+                        {work.startDate}
+                        {' '}
+                        &bull;
+                        {' '}
+                        {work.endDate}
+                      </span>
+                      <ul className="flex flex-col gap-4 px-4 pt-2">
+                        {work.tasks.map((task) => (
+                          <li key={task} className="list-disc">
+                            {task}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="absolute top-0 left-0 w-full h-full border rounded-md shadow-md glass -z-10 border-star/20 shadow-stardust/10" />
+                  </article>
+                ))
+              }
             </div>
           </section>
         </div>
