@@ -1,9 +1,12 @@
 'use client';
 
 import emailjs from '@emailjs/browser';
+import { useState } from 'react';
 import { toast } from 'sonner';
 
 export default function Form() {
+  const [isLoading, setIsLoading] = useState(false);
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -19,6 +22,7 @@ export default function Form() {
       && alphanumericRegex.test(message as string)
       && emailRegex.test(email as string)
     ) {
+      setIsLoading(true);
       fetch('/api/kv-send-message', {
         method: 'POST',
         body: JSON.stringify({ name, email, message }),
@@ -41,6 +45,8 @@ export default function Form() {
         }
       }).catch(() => {
         toast.error('There was an error saving the contact.');
+      }).finally(() => {
+        setIsLoading(false);
       });
     }
   };
@@ -85,7 +91,13 @@ export default function Form() {
           className="px-2 py-1 rounded-md border border-star/20 bg-transparent min-h-[60px] max-h-[200px]"
         />
       </label>
-      <button type="submit" className="py-1 text-xl font-bold rounded-md text-void mix-blend-lighten bg-gradient-to-r from-bigbang via-nebula to-sun">Send</button>
+      <button
+        type="submit"
+        disabled={isLoading}
+        className="py-1 text-xl font-bold rounded-md text-void bg-gradient-to-r from-bigbang via-nebula to-sun"
+      >
+        {isLoading ? 'Sending' : 'Send'}
+      </button>
       <div className="absolute top-0 left-0 w-full h-full border rounded-md shadow-md glass -z-10 border-star/20 shadow-stardust/10" />
     </form>
   );
