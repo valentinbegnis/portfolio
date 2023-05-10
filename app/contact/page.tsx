@@ -1,5 +1,5 @@
-import Form from '@/components/Form';
-import GmailIcon from '@/components/icons/Gmail';
+import ContactForm from '@/components/ContactForm';
+import { GmailIcon } from '@/components/icons/Icons';
 
 export default function ContactPage() {
   return (
@@ -7,8 +7,7 @@ export default function ContactPage() {
       <h1 className="text-4xl font-bold text-center text-nebula">Contact me</h1>
       <div className="flex flex-col gap-4">
         <h2 className="text-2xl font-medium text-center text-sky">Send me an email</h2>
-        <Form />
-
+        <ContactForm />
         <a
           href="mailto:begnisvalentin@gmail.com"
           target="_blank"

@@ -1,8 +1,8 @@
 import '@/styles/globals.css';
 import { Space_Grotesk as spaceGrotesk } from 'next/font/google';
 import Header from '@/components/Header';
-import BackgroundAnimation from '@/components/BackgroundAnimation';
 import Toaster from '@/components/Toaster';
+import ShootingStars from '@/components/ShootingStars';
 
 export const metadata = {
   title: 'Valentín Begnis | Full Stack Developer',
@@ -31,7 +31,14 @@ export default function RootLayout({
         <main className="relative flex items-center justify-center">
           {children}
         </main>
-        <BackgroundAnimation />
+
+        <div className="bg-animation">
+          <div className="stars" />
+          <div className="stars2" />
+          <div className="stars3" />
+          <div className="stars4" />
+        </div>
+        <ShootingStars />
       </body>
     </html>
   );

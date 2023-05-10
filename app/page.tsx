@@ -1,6 +1,4 @@
-import GitHubIcon from '@/components/icons/GitHub';
-import LinkedInIcon from '@/components/icons/LinkedIn';
-import GmailIcon from '@/components/icons/Gmail';
+import { GitHubIcon, GmailIcon, LinkedInIcon } from '@/components/icons/Icons';
 
 const links = [
   {
@@ -19,10 +17,10 @@ const links = [
 
 export default function HomePage() {
   return (
-    <div className="w-full h-screen relative text-star overflow-hidden">
-      <div className="h-full flex flex-col justify-center items-center gap-2">
+    <div className="relative w-full h-screen overflow-hidden text-star">
+      <div className="flex flex-col items-center justify-center h-full gap-2">
         <p className="text-xl font-medium">Hi there! 👋 I&apos;m</p>
-        <h1 className="text-6xl font-bold flex flex-col items-center gap-1 bg-clip-text text-transparent bg-gradient-to-r from-bigbang via-nebula to-sun">
+        <h1 className="flex flex-col items-center gap-1 text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-bigbang via-nebula to-sun">
           Valentín
           <span className="h-[78px]">
             Begnis
@@ -30,14 +28,14 @@ export default function HomePage() {
         </h1>
         <p className="text-2xl font-medium">Full Stack Developer</p>
       </div>
-      <ul className="w-full flex justify-center gap-4 absolute z-10 bottom-20">
+      <ul className="absolute z-10 flex justify-center w-full gap-4 bottom-20">
         {links.map(({ route, icon }) => (
           <li key={route}>
             <a
               href={route}
               target="_blank"
               rel="noreferrer"
-              className="text-stardust/80 hover:text-star/90 transition-colors"
+              className="transition-colors text-stardust/80 hover:text-star/90"
             >
               {icon}
             </a>

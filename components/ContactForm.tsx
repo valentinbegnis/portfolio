@@ -4,7 +4,7 @@ import emailjs from '@emailjs/browser';
 import { useState } from 'react';
 import { toast } from 'sonner';
 
-export default function Form() {
+export default function ContactForm() {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {

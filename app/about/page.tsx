@@ -1,12 +1,14 @@
-import DockerIcon from '@/components/icons/stack/DockerIcon';
-import ExpressIcon from '@/components/icons/stack/ExpressIcon';
-import MongoIcon from '@/components/icons/stack/MongoIcon';
-import NextIcon from '@/components/icons/stack/NextIcon';
-import NodeIcon from '@/components/icons/stack/NodeIcon';
-import PostgresIcon from '@/components/icons/stack/PostgresIcon';
-import PythonIcon from '@/components/icons/stack/PythonIcon';
-import ReactIcon from '@/components/icons/stack/ReactIcon';
-import TypeScriptIcon from '@/components/icons/stack/TypeScriptIcon';
+import {
+  DockerIcon,
+  ExpressIcon,
+  MongoIcon,
+  NextIcon,
+  NodeIcon,
+  PostgresIcon,
+  PythonIcon,
+  ReactIcon,
+  TypeScriptIcon,
+} from '@/components/icons/Stack';
 
 const stack = [
   {
