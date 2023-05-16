@@ -2,12 +2,28 @@ import ProjectCard from '@/components/ProjectCard';
 
 const projects = [
   {
+    name: 'Technical Challenge',
+    description: 'Technical challenge completed for the SSR Full Stack Developer role at Gett, with excellent feedback received.',
+    images: ['/images/Technical-Challenge-1.png', '/images/Technical-Challenge-2.png', '/images/Technical-Challenge-3.png'],
+    githubUrl: 'https://github.com/valentinbegnis/DesafioSSR2023-Gett',
+    deployUrl: 'https://challenge-gett.vercel.app/',
+    stackUsed: ['Next.js', 'TypeScript', 'Redux-toolkit', 'Tailwind CSS', 'Tremor', 'API'],
+  },
+  {
+    name: 'Dolar Converter',
+    description: 'Check the latest USD prices in Argentine Pesos. Convert pesos to USD for comprehensive financial analysis.',
+    images: ['/images/Dolar-Converter-1.png', '/images/Dolar-Converter-2.png'],
+    githubUrl: 'https://github.com/valentinbegnis/dolar-converter-webscraping',
+    deployUrl: 'https://dolar-converter.vercel.app/',
+    stackUsed: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Web scraping', 'API'],
+  },
+  {
     name: 'Fashion Ecommerce',
     description: 'Real Ecommerce for a local brand with existing clients. Easy CRUD operations via Google Spreadsheets.',
     images: ['/images/Fashion-Ecommerce-1.png', '/images/Fashion-Ecommerce-2.png', '/images/Fashion-Ecommerce-3.png'],
     githubUrl: 'https://github.com/valentinbegnis/ecommerce-calzados-nextjs',
     deployUrl: 'https://picotacalzados.vercel.app',
-    stackUsed: ['Next.js', 'ChakraUI', 'LocalStorage', 'Google Spreadsheets'],
+    stackUsed: ['Next.js', 'ChakraUI', 'Google Spreadsheets'],
   },
   {
     name: 'Crypto Space',
@@ -15,7 +31,7 @@ const projects = [
     images: ['/images/Crypto-Space-1.png', '/images/Crypto-Space-2.png', '/images/Crypto-Space-3.png'],
     githubUrl: 'https://github.com/valentinbegnis/crypto-space-react',
     deployUrl: 'https://cryptocurrencyspace.netlify.app',
-    stackUsed: ['React.js', 'Chart.js', 'API\'s', 'Redux-toolkit', 'Ant Design'],
+    stackUsed: ['React.js', 'Redux-toolkit', 'Ant Design', 'Chart.js', 'API'],
   },
 ];
 

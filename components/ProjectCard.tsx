@@ -5,23 +5,25 @@ interface Props {
 }
 
 const technologies: TechnologiesOptions = {
-  'TypeScript': 'text-[#3178c6]',
-  'React.js': 'text-[#61dafb]',
   'Next.js': 'text-star',
-  'Redux-toolkit': 'text-[#ba8fff]',
+  'React.js': 'text-[#61dafb]',
+  'TypeScript': 'text-[#3178c6]',
+  'Tailwind CSS': 'text-[#0ea5e9]',
   'ChakraUI': 'text-sky',
   'Ant Design': 'text-nebula',
-  'Chart.js': 'text-[#fe777b]',
-  'API\'s': 'text-stardust',
+  'Tremor': 'text-[#14b8a6]',
+  'Redux-toolkit': 'text-[#ba8fff]',
   'Google Spreadsheets': 'text-[#41cb83]',
-  'LocalStorage': 'text-stardust',
+  'Chart.js': 'text-[#fe777b]',
+  'Web scraping': 'text-[#fe777b]',
+  'API': 'text-stardust',
 };
 
 export default function ProjectCard({ project }: Props) {
   return (
     <article className="w-[320px] md:w-[644px] relative flex flex-col md:flex-row gap-3 md:gap-4">
       <Carousel images={project.images} name={project.name} />
-      <div className="flex flex-col items-center gap-3 px-3 pb-3 md:w-72 md:relative md:justify-between md:p-0">
+      <div className="flex flex-col items-center gap-3 px-3 pb-3 md:w-80 md:relative md:justify-between md:p-0">
         <h3 className="text-2xl font-bold md:text-3xl">{project.name}</h3>
         <p className="text-center md:text-start md:glass md:colored-blur md:absolute md:z-10 md:top-12 md:-left-16 md:p-3 md:rounded-md md:border md:border-star/20 md:shadow-md md:shadow-nebula/10">
           {project.description}
