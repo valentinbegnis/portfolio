@@ -1,4 +1,5 @@
 import ProjectCard from '@/components/ProjectCard';
+import { ExternalLinkIcon } from '@/components/icons/Icons';
 
 const projects = [
   {
@@ -59,6 +60,15 @@ export default function ProjectsPage() {
           </div>
         ))}
       </div>
+      <a
+        href="https://github.com/valentinbegnis?tab=repositories"
+        target="_blank"
+        rel="noreferrer"
+        className="flex items-center justify-center gap-2 mt-6 text-lg"
+      >
+        See more projects
+        <ExternalLinkIcon width={24} height={24} className="text-star" />
+      </a>
     </div>
   );
 }
