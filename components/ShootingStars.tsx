@@ -8,7 +8,7 @@ export default function ShootingStars() {
   return (
     <div className="shooting-stars-animation">
       {(pathname === '/' || pathname === '/contact')
-        && [...new Array(11)].map((_, i) => <span key={i} />)}
+        && Array.from(Array(10), (x, i) => i + 1).map((starNumber) => <span key={starNumber} />)}
     </div>
   );
 }
